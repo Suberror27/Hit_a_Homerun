@@ -1,0 +1,148 @@
+/*Copy right. Made by Abraham Camargo*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Bogle;
+    text-align: center;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+html{
+	background: url("pictures/baseball.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+
+h1 {
+    background-color: #041f41;
+    height: 8vh;
+    width: 98%;
+    border-radius: 15px;
+    margin: auto;
+    color: #ffffff;
+    font-size: 3em;
+    overflow: hidden;
+}
+
+#span {
+    color: #ffc220; 
+    font-size: 1em;
+}
+
+.Spark{
+    width: 3.3%;
+    position: relative;
+    top: 1.2vmin;
+    animation: rotation 6s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+#container {
+    width: 400px; 
+    height: 300px; 
+    margin: 0 auto; 
+    position: absolute; 
+    left: 15%; 
+    top: 9%; 
+    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.6); 
+}
+
+#datatable {
+    background-color: #C3C4C6;
+    position: absolute;
+    top: 39%;
+    left: 1%;
+    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.6);
+}
+
+#container2 {
+    width: 400px; 
+    height: 300px; 
+    margin: 0 auto; 
+    position: absolute; 
+    right: 15%; 
+    top: 9%; 
+    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.6);
+}
+
+#datatable2 {
+    background-color: #C3C4C6;
+    position: absolute;
+    top: 39%;
+    right: 1%;
+    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.6);
+}
+
+td, th {
+    width: 90px;
+    border: 1px solid #041f41;
+}
+
+td {
+    cursor: pointer;
+}
+
+th {
+    cursor: default;
+}
+
+#placeHolder {
+    background-color: #041f41;
+    color: #ffffff;
+    cursor: default;
+}
+
+#safety {
+    background-color: #ffffff;
+}
+
+#area {
+    background-color: #B1C7F5;
+}
+
+#shift {
+    background-color: #041f41;
+    color: #ffffff;
+}
+
+#week {
+    background-color: #041f41;
+    color: #ffffff;
+}
+
+.FullScreen {
+    position: absolute; 
+    float: right; 
+    right: 1%; 
+    bottom: 0; 
+    color: #ffffff; 
+    background-color: red; 
+    text-align: center; 
+    height: 3vh; 
+    width: auto; 
+    line-height: 3vh;
+    font-weight: bold;
+}
+
+h6 {
+    float: left; 
+    left: 0.4%; 
+    color: white; 
+    position: absolute; 
+    bottom: 1%; 
+    font-size: 0.6em;
+}
