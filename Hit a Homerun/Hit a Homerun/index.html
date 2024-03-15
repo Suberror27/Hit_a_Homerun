@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Pictures/Spark_Icon.ico">
+    <title>Hit a Homerun</title>
+</head>
+<body>
+    <div id=logoContainer>
+        <h1>Walmart<img class="Spark" src="Pictures/Spark.png">DC 6094 <span id="span">Hit a Homerun for Safety Competition</span></h1>
+    </div>
+
+    <div id="container"></div>
+
+<table id="datatable">
+    <tr>
+        <th colspan="20" style="font-weight: bold; background-color: #041f41; color: #ffffff; font-size: 25px;">Week Days Team</th>
+    </tr>
+    <tr>
+        <th id="safety">Area</th>
+        <th colspan="4" id="safety">Safety Runs Scored in April</th>
+        <th colspan="5" id="safety">Safety Runs Scored in May</th>
+    </tr>
+    <tr>
+        <th id="shift">A1</th>
+        <th id="week">Week 10</th>
+        <th id="week">Week 11</th>
+        <th id="week">Week 12</th>
+        <th id="week">Week 13</th>
+        <th id="week">Week 14</th>
+        <th id="week">Week 15</th>
+        <th id="week">Week 16</th>
+        <th id="week">Week 17</th>
+        <th id="week">Week 18</th>
+    </tr>
+    <tr>
+        <th id="area">DAR A1</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">SSR A1</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">Shipping A1</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">Caselot A1</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">PICK A1</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">PUT A1</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">PFC A1</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">Maint A1</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">QA/DP A1</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">AP/HR A1</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="shift">A2</th>
+        <th id="placeHolder">Week 10</th>
+        <th id="placeHolder">Week 11</th>
+        <th id="placeHolder">Week 12</th>
+        <th id="placeHolder">Week 13</th>
+        <th id="placeHolder">Week 14</th>
+        <th id="placeHolder">Week 15</th>
+        <th id="placeHolder">Week 16</th>
+        <th id="placeHolder">Week 17</th>
+        <th id="placeHolder">Week 18</th>
+    </tr>
+    <tr>
+        <th id="area">DAR A2</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">SSR A2</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">Shipping A2</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">Caselot A2</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">PICK A2</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">PUT A2</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">PFC A2</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">Maint A2</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">QA/DP A2</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">AP/HR A2</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <!-- Add more rows if needed -->
+</table>
+
+<script>
+    // Function to save data to localStorage
+    function saveDataToLocal() {
+        const tableData = {};
+        const table = document.getElementById('datatable');
+        for (let row of table.rows) {
+            const id = row.cells[0].textContent.trim();
+            if (id !== '') {
+                tableData[id] = [];
+                for (let i = 1; i < row.cells.length; i++) {
+                    tableData[id].push(row.cells[i].textContent);
+                }
+            }
+        }
+        localStorage.setItem('tableData1', JSON.stringify(tableData)); // Changed the key to 'tableData1'
+    }
+
+    // Function to restore data from localStorage
+    function restoreDataFromLocal() {
+        const tableData = JSON.parse(localStorage.getItem('tableData1')); // Changed the key to 'tableData1'
+        if (tableData) {
+            const table = document.getElementById('datatable');
+            for (let row of table.rows) {
+                const id = row.cells[0].textContent.trim();
+                if (id !== '' && tableData[id]) {
+                    for (let i = 1; i < row.cells.length; i++) {
+                        row.cells[i].textContent = tableData[id][i - 1];
+                    }
+                }
+            }
+        }
+    }
+
+    // Function to update chart data based on table values
+    function updateChart() {
+        saveDataToLocal(); // Save data before updating the chart
+        const table = document.getElementById('datatable');
+        const data = {};
+        for (let row of table.rows) {
+            const id = row.cells[0].textContent.trim(); // Get ID value from the first cell of each row
+            if (id !== '') {
+                for (let i = 1; i < row.cells.length; i++) {
+                    const value = parseInt(row.cells[i].textContent);
+                    if (!isNaN(value)) {
+                        if (!data[id]) {
+                            data[id] = value;
+                        } else {
+                            data[id] += value;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Find the top 3 aggregated values
+        const top3 = Object.entries(data)
+            .sort((a, b) => b[1] - a[1])
+            .slice(0, 3);
+
+        // Convert the data into Highcharts series format
+        const seriesData = top3.map(entry => ({
+            name: entry[0],
+            y: entry[1]
+        }));
+
+        // Update the Highcharts series data
+        chart.series[0].setData(seriesData);
+    }
+
+    Highcharts.setOptions({
+    colors: ['#0071ce']
+    });
+    // Create the initial Highcharts chart
+    const chart = Highcharts.chart('container', {
+        chart: {
+            type: 'column',
+            backgroundColor: "#C3C4C6",
+            animation: true
+        },
+        title: {
+            text: 'Week Days Team Top 3 Areas'
+        },
+        xAxis: {
+            type: 'category'
+        },
+        yAxis: {
+            title: {
+                text: 'Points'
+            }
+        },
+        series: [{
+            name: 'Total Points',
+            data: []
+        }]
+    });
+
+    // Call restoreDataFromLocal function initially to restore data from localStorage
+    restoreDataFromLocal();
+    // Call updateChart function initially
+    updateChart();
+
+    // Attach event listeners to table cells for value change
+    const cells = document.querySelectorAll('#datatable td');
+    cells.forEach(cell => {
+        cell.addEventListener('input', () => {
+            updateChart();
+        });
+    });
+</script>
+
+<div id="container2"></div>
+
+<table id="datatable2">
+    <tr>
+        <th colspan="20" style="font-weight: bold; background-color: #041f41; color: #ffffff; font-size: 25px;">Weekend Team</th>
+    </tr>
+    <tr>
+        <th id="safety">Area</th>
+        <th colspan="4" id="safety">Safety Runs Scored in April</th>
+        <th colspan="5" id="safety">Safety Runs Scored in May</th>
+    </tr>
+    <tr>
+        <th id="shift">A1</th>
+        <th id="week">Week 10</th>
+        <th id="week">Week 11</th>
+        <th id="week">Week 12</th>
+        <th id="week">Week 13</th>
+        <th id="week">Week 14</th>
+        <th id="week">Week 15</th>
+        <th id="week">Week 16</th>
+        <th id="week">Week 17</th>
+        <th id="week">Week 18</th>
+    </tr>
+    <tr>
+        <th id="area">DAR B1</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">SSR B1</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">Shipping B1</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">Caselot B1</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">PICK B1</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">PUT B1</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">PFC B1</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">Maint B1</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">QA/DP B1</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">AP/HR B1</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="shift">B2</th>
+        <th id="placeHolder">Week 10</th>
+        <th id="placeHolder">Week 11</th>
+        <th id="placeHolder">Week 12</th>
+        <th id="placeHolder">Week 13</th>
+        <th id="placeHolder">Week 14</th>
+        <th id="placeHolder">Week 15</th>
+        <th id="placeHolder">Week 16</th>
+        <th id="placeHolder">Week 17</th>
+        <th id="placeHolder">Week 18</th>
+    </tr>
+    <tr>
+        <th id="area">DAR B2</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">SSR B2</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">Shipping B2</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">Caselot B2</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">PICK B2</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">PUT B2</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">PFC B2</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">Maint B2</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">QA/DP B2</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <tr>
+        <th id="area">AP/HR B2</th>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+    </tr>
+    <!-- Add more rows if needed -->
+</table>
+
+<script>
+    // Function to save data to localStorage
+    function saveDataToLocal2() {
+        const tableData = {};
+        const table = document.getElementById('datatable2');
+        for (let row of table.rows) {
+            const id = row.cells[0].textContent.trim();
+            if (id !== '') {
+                tableData[id] = [];
+                for (let i = 1; i < row.cells.length; i++) {
+                    tableData[id].push(row.cells[i].textContent);
+                }
+            }
+        }
+        localStorage.setItem('tableData2', JSON.stringify(tableData)); // Changed the key to 'tableData2'
+    }
+
+    // Function to restore data from localStorage
+    function restoreDataFromLocal2() {
+        const tableData = JSON.parse(localStorage.getItem('tableData2')); // Changed the key to 'tableData2'
+        if (tableData) {
+            const table = document.getElementById('datatable2');
+            for (let row of table.rows) {
+                const id = row.cells[0].textContent.trim();
+                if (id !== '' && tableData[id]) {
+                    for (let i = 1; i < row.cells.length; i++) {
+                        row.cells[i].textContent = tableData[id][i - 1];
+                    }
+                }
+            }
+        }
+    }
+
+    // Function to update chart data based on table values
+    function updateChart2() {
+        saveDataToLocal2(); // Save data before updating the chart
+        const table = document.getElementById('datatable2');
+        const data = {};
+        for (let row of table.rows) {
+            const id = row.cells[0].textContent.trim(); // Get ID value from the first cell of each row
+            if (id !== '') {
+                for (let i = 1; i < row.cells.length; i++) {
+                    const value = parseInt(row.cells[i].textContent);
+                    if (!isNaN(value)) {
+                        if (!data[id]) {
+                            data[id] = value;
+                        } else {
+                            data[id] += value;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Find the top 3 aggregated values
+        const top3 = Object.entries(data)
+            .sort((a, b) => b[1] - a[1])
+            .slice(0, 3);
+
+        // Convert the data into Highcharts series format
+        const seriesData = top3.map(entry => ({
+            name: entry[0],
+            y: entry[1]
+        }));
+
+        // Update the Highcharts series data
+        chart2.series[0].setData(seriesData);
+    }
+
+    Highcharts.setOptions({
+    colors: ['#0071ce']
+    });
+
+    // Create the initial Highcharts chart
+    const chart2 = Highcharts.chart('container2', {
+        chart: {
+            type: 'column',
+            backgroundColor: "#C3C4C6",
+            animation: true
+        },
+        title: {
+            text: 'Weekend Team Top 3 Areas'
+        },
+        xAxis: {
+            type: 'category'
+        },
+        yAxis: {
+            title: {
+                text: 'Points'
+            }
+        },
+        series: [{
+            name: 'Total Points',
+            data: []
+        }]
+    });
+
+    // Call restoreDataFromLocal function initially to restore data from localStorage
+    restoreDataFromLocal2();
+    // Call updateChart function initially
+    updateChart2();
+
+    // Attach event listeners to table cells for value change
+    const cells2 = document.querySelectorAll('#datatable2 td');
+    cells2.forEach(cell => {
+        cell.addEventListener('input', () => {
+            updateChart2();
+        });
+    });
+</script>
+
+<h6>For assistance contact Abraham.Camargo@walmart.com</h6>
+
+<div>
+    <button class="FullScreen" value="click to toggle fullscreen" onclick="toggleFullScreen()">Full Screen</button>
+</div>
+<script>
+    function toggleFullScreen() {
+        if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
+        (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+            if (document.documentElement.requestFullScreen) {  
+            document.documentElement.requestFullScreen();  
+            } else if (document.documentElement.mozRequestFullScreen) {  
+            document.documentElement.mozRequestFullScreen();  
+            } else if (document.documentElement.webkitRequestFullScreen) {  
+            document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
+            }  
+        } else {  
+            if (document.cancelFullScreen) {  
+            document.cancelFullScreen();  
+            } else if (document.mozCancelFullScreen) {  
+            document.mozCancelFullScreen();  
+            } else if (document.webkitCancelFullScreen) {  
+            document.webkitCancelFullScreen();  
+            }  
+        }  
+        }
+</script>
+
+</body>
+</html>
